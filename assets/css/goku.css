@@ -1,0 +1,176 @@
+body {
+    background: #e4c59c;
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-direction:column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  transition: transform 1s;
+  max-width: 800px;
+    margin: auto;
+}
+body.smallbody {
+  transform: scale(.5);
+  
+}
+.small-lg {
+  background:none;
+  width: 100%;
+  border: 2px solid black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+    cursor:pointer;
+  font-size: 30px;
+  margin-top: 25px;
+  padding: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 14px;
+  transition: 2s;
+  top: -56px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: -135px;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+  width: 0;
+  z-index: 21;
+  box-shadow: 1px 1px 25px 25px rgb(108, 250, 255);
+  height: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 0px;
+  bottom:-3px;
+  background-color: white;
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+  z-index: 1;
+  box-shadow: 1px 1px 40px 25px rgba(108, 250, 255, 0.904);
+}
+input:checked .switch {
+    top: -59px;
+}
+input:checked + .slider {
+  background-color: white;
+  width: 349px;
+  transition: 1.4s;
+  box-shadow: 1px 1px 40px 25px rgb(108, 250, 255);
+  height: 22px;
+}
+
+input:focus + .slider {
+    box-shadow: 1px 1px 40px 25px rgb(108, 250, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  transform: translateX(300px);
+  bottom: -25px;
+  height: 75px;
+  width: 75px;
+  left: 0px;
+  mix-blend-mode: color-dodge;
+ 
+
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.fight-box {
+    max-width: 550px;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 13px double #e4c59c;
+    border-top-left-radius: 190px;
+    border-top-right-radius: 190px;
+    background: url(https://i.ytimg.com/vi/OwdMZ5mk1IU/maxresdefault.jpg);
+    border-bottom-left-radius: 170px;
+    border-bottom-right-radius: 170px;
+    background-position-x: right;
+    transition: background-position-x 1.4s;
+  background-position-y: -150px;
+}
+.fight-box.bg-shift {
+    background-position-x: left;
+}
+.fight-box img {
+    width: 150px;
+    height: auto;
+    
+}
+.goku {
+    transform: rotateY(180deg) rotate(-10deg);
+    position: relative;
+    z-index: 0;
+    transition: filter 1s
+}
+.glow {
+    transform: rotateY(180deg) rotate(-10deg);
+    position: relative;
+    z-index: 0;
+    filter: drop-shadow(0px 0px 11px #2394a5) brightness(1.5);
+}
+.f-glow {
+    filter: brightness(1.4);
+    transform: rotate(45deg);
+    position: relative;
+    z-index: 0;
+}
+.frieza {
+    /* transform: rotate(45deg); */
+    position: relative;
+    z-index: 0;
+    transition: transform 1.6s
+}
+.move {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 14px;
+    transition: .3s;
+    top: -59px;
+}
+p{
+  font-size: 25px;
+  font-weight: 700;
+
+}
